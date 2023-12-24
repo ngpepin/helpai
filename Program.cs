@@ -1,4 +1,40 @@
-﻿using System;
+﻿/*
+ * HelpAI Command Line Tool
+ * -------------------------
+ * Filename: helpai.cs
+ *
+ * This tool is a command line interface for interacting with an AI language model,
+ * specifically designed to work with the 'llm' command (and, as configured, the 'mistral-7b-openorca' model).
+ *
+ * Key Features:
+ *  - Maintains a history of user prompts and AI responses to provide context for subsequent interactions.
+ *  - Supports commands to reset history and enable debug mode.
+ *  - Dynamically generates a Markdown file from the dialogue history for easy reading and sharing.
+ *  - Handles special characters and ensures the integrity of the prompts and responses.
+ *  - Measures and displays the response time of the AI model.
+ *
+ * Usage:
+ *  - To use the tool, compile this file to a standalone executable for a Linux x64 environment.
+ *  - Run the executable from the command line, passing the prompt for the AI as an argument.
+ *  - Optional flags include '-r' or '--reset' to reset the history, and '-d' or '--debug' for debug output.
+ *
+ * Implementation Details:
+ *  - The program maintains a history of exchanges (both prompts and responses) in a text file.
+ *    This history is prepended to new prompts to provide context to the AI model.
+ *  - The history file is trimmed if it exceeds a specified character limit to avoid buffer overflow issues.
+ *  - Special characters in the prompts and responses are handled to prevent syntax or format issues.
+ *  - The tool also creates a Markdown formatted transcript of the dialogue, with appropriate formatting
+ *    for code segments, lists, and headers.
+ *
+ * Author: [Your Name]
+ * Date: [Date of Creation]
+ * Version: 1.0
+ *
+ * Note: Ensure that the 'llm' command and the 'mistral-7b-openorca' model are properly configured and accessible
+ * in the environment where this tool is executed.
+ */
+
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
