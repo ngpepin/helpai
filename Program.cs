@@ -26,8 +26,8 @@
  *  - The tool also creates a Markdown formatted transcript of the dialogue, with appropriate formatting
  *    for code segments, lists, and headers.
  *
- * Author: [Your Name]
- * Date: [Date of Creation]
+ * Author: Nicolas Pepin
+ * Date: 2023
  * Version: 1.0
  *
  * Note: Ensure that the 'llm' command and the 'mistral-7b-openorca' model are properly configured and accessible
